@@ -132,7 +132,7 @@ public class Window {
 
 	}
 
-	// this will display the window
+	// this will display the window and call the init method
 	public void show() {
 
 		j.setVisible(true);
@@ -141,6 +141,11 @@ public class Window {
 		c.createBufferStrategy(3);
 		// this will make it so we can use key as soon as window is up
 		c.requestFocus();
+		if (wc != null) {
+			
+			wc.onInit(this);
+			
+		}
 
 	}
 
@@ -230,6 +235,12 @@ public class Window {
 
 		return j.getHeight();
 
+	}
+	
+	public boolean IsClosed() {
+		
+		return closed;
+		
 	}
 
 	// setters
