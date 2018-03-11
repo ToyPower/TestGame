@@ -27,7 +27,12 @@ public class KeyManager implements KeyListener {
 	}
 	
 	public boolean isKeyPressed(String key) {
-		
+		if (keyPress.contains(key.toLowerCase())) {
+			keyPress.remove(key.toLowerCase());
+			
+			return true;
+			
+		}
 		return keyPress.contains(key.toLowerCase());
 		
 	}
