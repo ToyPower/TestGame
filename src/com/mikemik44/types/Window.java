@@ -26,8 +26,8 @@ public class Window {
 	private boolean closed = true;
 
 	// our frames
-	private JFrame j;
-	private Canvas c;
+	private JFrame j = new JFrame();
+	private Canvas c = new Canvas();
 
 	// our managers
 	private KeyManager km = new KeyManager();
