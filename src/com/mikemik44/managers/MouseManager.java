@@ -11,6 +11,14 @@ public class MouseManager implements MouseListener, MouseMotionListener{
 	private ArrayList<String> buttonPressed = new ArrayList<String>();
 	private int x, y;
 	
+	//this will remove the mousemanager stuff
+	public void dispose() {
+		
+		buttonDown = null;
+		buttonPressed = null;
+		
+	}
+	
 	//getters
 	public int getX() {
 		

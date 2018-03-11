@@ -10,6 +10,14 @@ public class KeyManager implements KeyListener {
 	ArrayList<String> keyPress = new ArrayList<String>();
 	ArrayList<String> keyDown = new ArrayList<String>();
 
+	//this will remove the keymanager components
+	public void dispose() {
+		
+		keyPress = null;
+		keyDown = null;
+		
+	}
+	
 	// getters
 	
 	public boolean isKeyDown(String key) {
