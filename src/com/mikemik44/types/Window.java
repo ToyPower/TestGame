@@ -60,6 +60,11 @@ public class Window {
 			@Override
 			public void windowClosed(WindowEvent arg0) {
 
+			}
+
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+
 				closed = true;
 				if (wc != null) {
 
@@ -70,12 +75,7 @@ public class Window {
 					System.exit(0);
 
 				}
-
-			}
-
-			@Override
-			public void windowClosing(WindowEvent arg0) {
-
+				
 			}
 
 			@Override
